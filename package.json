@@ -1,0 +1,47 @@
+{
+  "name": "hdhomerun-live",
+  "version": "0.0.1",
+  "description": "HDHomeRun Emulator with LiveTV support using cable provider login",
+  "main": "index.js",
+  "bugs": {
+    "url": "http://github.com/jeffdoubleyou/hdhomerun-live/issues"
+  },
+  "dependencies": {
+    "buffer-crc32": ">=0.2.1",
+    "dateformat": "^3.0.3",
+    "dgram": "^1.0.1",
+    "express": "^4.15.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "lowdb": "^1.0.0",
+    "morgan": "^1.8.2",
+    "mustache": "^2.3.0",
+    "puppeteer": "1.14.0"
+  },
+  "engines": {
+    "node": ">=0.9.4"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "nodeunit": ">=0.7.4"
+  },
+  "scripts": {
+    "test": "nodeunit ./test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jeffdoubleyou/hdhomerun-live.git"
+  },
+  "keywords": [
+    "hdhomerun",
+    "tv",
+    "tuner",
+    "video",
+    "dvr",
+    "live",
+    "emulator"
+  ],
+  "author": "Jeffrey Weitz <jeffdoubleyou@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
