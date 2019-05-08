@@ -1,4 +1,4 @@
-#hdhomerun
+# hdhomerun-live
 
 HDHomeRun Emulator that scrapes playlist URLs from TV station live streaming web pages.
 
@@ -8,19 +8,19 @@ Should work with any type of playlist that is supported by FFMPEG, so you could 
 
 This is a work in progress....
 
-##Installation:
+## Installation:
 
 	yarn install
 
-##Running
+## Running
 
     Edit settings.json
     node multicast.js
 
-##License:
+## License:
 MIT.
 
-##Attibutions:
+## Attibutions:
 
 Some ( Currently most ) libhdhomerun protocol implementation from:
 
