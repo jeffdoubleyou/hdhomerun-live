@@ -1,21 +1,43 @@
 {
+  "config": [
+    {
+      "type": "device",
+      "FriendlyName": "HDHomeRun Connect Live",
+      "ModelNumber": "DHR5-2US",
+      "FirmwareName": "hdhomerun5_atsc",
+      "TunerCount": 2,
+      "FirmwareVersion": "20180817",
+      "DeviceID": "1068A133",
+      "DeviceAuth": "noauth"
+    },
+    {
+      "type": "app",
+      "SkipScan": true,
+      "Debug": true,
+      "ChromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "ServerAddress": "192.168.0.107",
+      "Provider": "WOW",
+      "Username": "jeffdoubleyou",
+      "Password": "password"
+    }
+  ],
   "channels": [
     {
-      "GuideNumber": 502,
+      "GuideNumber": 1208,
       "GuideName": "FX",
       "HD": 1,
       "AudioCodec": "AC3",
       "VideoCodec": "MPEG2"
     },
     {
-      "GuideNumber": 504,
+      "GuideNumber": 1209,
       "GuideName": "FXM",
       "HD": 1,
       "AudioCodec": "AC3",
       "VideoCodec": "MPEG2"
     },
     {
-      "GuideNumber": 503,
+      "GuideNumber": 1210,
       "GuideName": "FXX",
       "HD": 1,
       "AudioCodec": "AC3",
@@ -43,47 +65,28 @@
       "value": 100
     }
   ],
-  "config": [
-    {
-      "type": "device",
-      "FriendlyName": "HDHomeRun Connect Live",
-      "ModelNumber": "DHR5-2US",
-      "FirmwareName": "hdhomerun5_atsc",
-      "TunerCount": 2,
-      "FirmwareVersion": "20180817",
-      "DeviceID": "1068A133",
-      "DeviceAuth": "noauth"
-    },
-    {
-      "type": "app",
-      "SkipScan": true,
-      "Debug": true,
-      "ChromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-      "Provider": "WOW",
-      "ServerAddress": "192.168.0.107"
-    }
-  ],
   "stream": [
     {
-      "GuideNumber": 502,
-      "Timestamp": 1557434719
+      "GuideNumber": 1208,
+      "Timestamp": 1557438534
     },
     {
-      "GuideNumber": 504,
-      "Timestamp": 1557434719
-    },
-    {
-      "GuideNumber": 503,
-      "Timestamp": 1557434719
+      "GuideNumber": 1210,
+      "Timestamp": 1557438534
     },
     {
       "GuideNumber": 1206,
-      "Timestamp": 1557434719
+      "Timestamp": 1557438534
+    },
+    {
+      "GuideNumber": 1209,
+      "Url": "https://fxxliveeast-lh.akamaihd.net/i/fxxeast_140091@140091/master.m3u8?hdnea=st=1557438801~exp=1557439131~acl=/*~id=24254e8a-fca8-4cdd-8136-a3492caca5c8~hmac=4a61d8d3031fabff3da6a5899b31fe112539882b8c3f9a95e9491ae5ba6f67cf",
+      "Timestamp": 1557438927
     },
     {
       "GuideNumber": 1207,
-      "Url": "https://turnerlive.akamaized.net/hls/live/572089/tnte/aes_slate/de/master.m3u8?hdnts=exp=1557435120~acl=/hls/live/572089/tnte/*!/hls/live/572089-b/tnte/*!/hls/live/630656/tnte/*!/hls/live/630656-b/tnte/*~id=b100684f16e4515ea0a8901344e10d34~hmac=e4701d6b5b0081914016936f4c0b62ced017c37868b82079d7aacab9e0912a1d",
-      "Timestamp": 1557434864
+      "Url": "https://turnerlive.akamaized.net/hls/live/572089/tnte/aes_slate/de/master.m3u8?hdnts=exp=1557439302~acl=/hls/live/572089/tnte/*!/hls/live/572089-b/tnte/*!/hls/live/630656/tnte/*!/hls/live/630656-b/tnte/*~id=b100684f16e4515ea0a8901344e10d34~hmac=0cd998627a7d405fdbe2b1405b7fc925ebfe48e1a204fac4f26df23984475f35",
+      "Timestamp": 1557439055
     }
   ]
 }

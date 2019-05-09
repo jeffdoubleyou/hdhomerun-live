@@ -1,20 +1,26 @@
 var ChannelClass = require('../lib/ChannelClass.js');
 const puppeteer = require('puppeteer');
 const timeout = ms => new Promise(res => setTimeout(res, ms))
+const Provider = require('../lib/Provider.js');
+const provider = new Provider;
+
+/* 
+    NOTE: Since these streams expire pretty regularly, a scan should be done at a regular interval - ScanInterval
+*/
 
 class Channel extends ChannelClass {
 
   constructor(args) {
-      console.log(args);
     super(args);
     this.GuideName = "FX";
-    this.GuideNumber = 502;
+    this.GuideNumber = 1208;
     this.HD = true;
-    this.ScanInterval = 500;
+    this.ScanInterval = 120;
   }
 
   InitializeChannel() {
 
+        const _self = this;
         if(this.HasPlaylist(this.ScanInterval)) {
             console.log("Already have playlist URL for channel %s", this.GuideName);
             this.Ready();
@@ -28,80 +34,29 @@ class Channel extends ChannelClass {
         }
 
         (async() => {
-            /*const browser = await puppeteer.launch({
-                "headless": false,
-                "userDataDir": './data',
-                "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-            });*/
-
-
-            var browserSettings = {};
-            var browser;
-
-            if(this.ChromeRemoteWsURL) {
-                browserSettings.browserURL = this.RemoteWsUrl;
-                browser = await puppeteer.connect(browserSettings);
-            }
-            else {
-                browserSettings.headless =  true;
-                browserSettings.userDataDir = './data';
-                browserSettings.executablePath = this.ChromeExecutablePath;
-                browser = await puppeteer.launch(browserSettings);
-            }
-
-            const page = await browser.newPage();
-            this.UserAgent = (await page.evaluate('navigator.userAgent'));
-            await page.setRequestInterception(true);
-            page.on('request', request => {
-                if(request._url.match('/master.m3u8')) {
-                    console.log("Got FX Playlist URL: ", request._url);
-                    this.PlaylistURL = request._url;
-                    this.Available = true;
-                    this.Ready();
-                    browser.close();
-                    return true;
-                }
-                request.continue();
+            provider.Provider = this.Provider;
+            provider.RequestorId = "fx";
+            provider.RedirectUrl = "https://www.fxnetworks.com/live-tv/fx/" + this._options["Timezone"] + "ern"
+            provider.Debug = true;
+            provider.DataDir = './newdatadir';
+            provider.on('Ready', function(url) {
+                console.log("Got URL %s", url);
+                _self.PlaylistURL = url;
+                _self.Available = true;
+                _self.Ready();
+                provider.Close();
             });
-
-            await Promise.race([
-                page.goto("https://www.fxnetworks.com/live-tv/fx/" + this._options["Timezone"] + "ern", {waitUntil: 'networkidle2'}),
-                new Promise(x => setTimeout(x, 30000)),
-            ]);
-
-            try {
-                await page.waitForSelector('#playerDiv', { timeout: 3000 });
-                await page.focus('#playerDiv');
-                await page.click('#playerDiv > div.image-wrapper > div > div > div');
-            }
-            catch {
-                console.log('No player!');
-            }
-            try {
-                await page.waitForSelector('#mvpdpicker', { timeout: 30000 });
-                await page.focus('#mvpdpicker');
-                console.log("Provider picker window displayed");
-                await page.click('#mvpdpicker > div.slates > div.slate.remembered > div.footer.rememberedfooter > button.rememberedokbutton');            
-                await page.waitForSelector('#mvpdpicker > div.slates > div.slate.success');
-                await page.waitForSelector('#mvpdpicker > div.slates > div.slate.success > button', { timeout: 30000 });
-                console.log("Provider login succeeded");
-                await timeout(5000)
-            } catch(err) {
-                console.log("No provider selector");
-            }
-
-            console.log("%s page loading completed", this.GuideName);
-
-            await page.waitFor(10000);
-            console.log("Timeout on %s", this.GuideName);
-            this.Error("Timeout waiting for %s", this.GuideName);
-            if(this.PlaylistURL)
-                return;
-            browser.close();
+            provider.on('Error', function(error) {
+                console.log("Error from provider %s", error);
+                _self.Error(error);
+                _self.Available = false;
+                provider.Close();
+            });
+            provider.Navigate().then(function() {
+                console.log("Navigation complete");
+            });
         })();
     }
-
-    
 }
 
 module.exports = Channel;
