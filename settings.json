@@ -29,7 +29,7 @@
       "VideoCodec": "MPEG2"
     },
     {
-      "GuideNumber": 501,
+      "GuideNumber": 1207,
       "GuideName": "TNT",
       "HD": 1,
       "AudioCodec": "AC3",
@@ -65,26 +65,25 @@
   ],
   "stream": [
     {
+      "GuideNumber": 502,
+      "Timestamp": 1557434719
+    },
+    {
       "GuideNumber": 504,
-      "Timestamp": 1557349131
+      "Timestamp": 1557434719
     },
     {
       "GuideNumber": 503,
-      "Timestamp": 1557349131
-    },
-    {
-      "GuideNumber": 501,
-      "Timestamp": 1557349371
-    },
-    {
-      "GuideNumber": 502,
-      "Url": "https://fxlivewest-lh.akamaihd.net/i/fxwest_138714@138714/master.m3u8?hdnea=st=1557349668~exp=1557349998~acl=/i/fxwest_138714@138714*~id=427fa9f5-4097-4b54-a524-f937d8d60877~hmac=fb847f0c6e30370326b0a3d679064b83dc086b767a8d275e450e77fec5bf41a7",
-      "Timestamp": 1557349875
+      "Timestamp": 1557434719
     },
     {
       "GuideNumber": 1206,
-      "Url": "https://turnerlive.akamaized.net/hls/live/572094/tbse/aes_slate/de/master.m3u8?hdnts=exp=1557352487~acl=/hls/live/630666/tbse/*!/hls/live/630666-b/tbse/*!/hls/live/572094/tbse/*!/hls/live/572094-b/tbse/*~id=b100684f16e4515ea0a8901344e10d34~hmac=e1c3866e69e5390d6aaf6c0ec9dd8c07e7c19048c2cfae17ccdd975f99fef7cc",
-      "Timestamp": 1557352188
+      "Timestamp": 1557434719
+    },
+    {
+      "GuideNumber": 1207,
+      "Url": "https://turnerlive.akamaized.net/hls/live/572089/tnte/aes_slate/de/master.m3u8?hdnts=exp=1557435120~acl=/hls/live/572089/tnte/*!/hls/live/572089-b/tnte/*!/hls/live/630656/tnte/*!/hls/live/630656-b/tnte/*~id=b100684f16e4515ea0a8901344e10d34~hmac=e4701d6b5b0081914016936f4c0b62ced017c37868b82079d7aacab9e0912a1d",
+      "Timestamp": 1557434864
     }
   ]
 }
