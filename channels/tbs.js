@@ -36,6 +36,8 @@ class Channel extends ChannelClass {
 
         (async() => {
             provider.Provider = this.Provider;
+            provider.Username = this.Username;
+            provider.Password = this.Password;
             provider.RequestorId = "TBS";
             provider.RedirectUrl = 'https://www.tbs.com/watchtbs/' + this._options["Timezone"];
             provider.Debug = true;
