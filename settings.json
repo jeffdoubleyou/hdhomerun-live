@@ -44,6 +44,13 @@
       "VideoCodec": "MPEG2"
     },
     {
+      "GuideNumber": 1211,
+      "GuideName": "USA",
+      "HD": 1,
+      "AudioCodec": "AC3",
+      "VideoCodec": "MPEG2"
+    },
+    {
       "GuideNumber": 1206,
       "GuideName": "TBS",
       "HD": 1,
