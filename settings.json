@@ -70,6 +70,13 @@
       "HD": 1,
       "AudioCodec": "AC3",
       "VideoCodec": "H264"
+    },
+    {
+      "GuideNumber": 1310,
+      "GuideName": "HGTV",
+      "HD": 1,
+      "AudioCodec": "AC3",
+      "VideoCodec": "H264"
     }
   ],
   "status": [
