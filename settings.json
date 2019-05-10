@@ -27,42 +27,42 @@
       "GuideName": "FX",
       "HD": 1,
       "AudioCodec": "AC3",
-      "VideoCodec": "MPEG2"
+      "VideoCodec": "H264"
     },
     {
       "GuideNumber": 1209,
       "GuideName": "FXM",
       "HD": 1,
       "AudioCodec": "AC3",
-      "VideoCodec": "MPEG2"
+      "VideoCodec": "H264"
     },
     {
       "GuideNumber": 1210,
       "GuideName": "FXX",
       "HD": 1,
       "AudioCodec": "AC3",
-      "VideoCodec": "MPEG2"
+      "VideoCodec": "H264"
     },
     {
       "GuideNumber": 1211,
       "GuideName": "USA",
       "HD": 1,
       "AudioCodec": "AC3",
-      "VideoCodec": "MPEG2"
+      "VideoCodec": "H264"
     },
     {
       "GuideNumber": 1206,
       "GuideName": "TBS",
       "HD": 1,
       "AudioCodec": "AC3",
-      "VideoCodec": "MPEG2"
+      "VideoCodec": "H264"
     },
     {
       "GuideNumber": 1207,
       "GuideName": "TNT",
       "HD": 1,
       "AudioCodec": "AC3",
-      "VideoCodec": "MPEG2"
+      "VideoCodec": "H264"
     },
     {
       "GuideNumber": 1301,
