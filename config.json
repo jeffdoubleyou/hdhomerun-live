@@ -1,0 +1,21 @@
+{ 
+  "device": {
+      "FriendlyName": "HDHomeRun Connect Live",
+      "ModelNumber": "HDHR5-2US",
+      "FirmwareName": "hdhomerun5_atsc",
+      "TunerCount": 2,
+      "FirmwareVersion": "20180817",
+      "DeviceID": "0x1068A145",
+      "DeviceAuth": "noauth"
+    },
+  "app": {
+      "type": "app",
+      "SkipScan": true,
+      "Debug": true,
+      "ChromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "ServerAddress": "192.168.0.107",
+      "Provider": "WOW",
+      "Username": "jeffdoubleyou",
+      "Password": "passwordtest"
+    }
+}
