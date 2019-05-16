@@ -15,7 +15,8 @@
     "lowdb": "^1.0.0",
     "morgan": "^1.8.2",
     "mustache": "^2.3.0",
-    "puppeteer": "1.14.0"
+    "puppeteer": "1.14.0",
+    "tcp-ping": "^0.1.1"
   },
   "engines": {
     "node": ">=0.9.4"

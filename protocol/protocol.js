@@ -23,6 +23,16 @@ HDHOMERUN_TAG_BASE_URL = 0x2A
 HDHOMERUN_TAG_LINEUP = 0x27
 
 module.exports = {
+    request: {
+        HDHOMERUN_TYPE_DISCOVER_REQ: 'discover',
+        HDHOMERUN_TYPE_GETSET_REQ: 'getset',
+        HDHOMERUN_TYPE_UPGRADE_REQ: 'upgrade'
+    },
+    reply: {
+        discover: HDHOMERUN_TYPE_DISCOVER_RPY,
+        getset: HDHOMERUN_TYPE_GETSET_RPY,
+        upgrade: HDHOMERUN_TYPE_UPGRADE_RPY
+    },
 	types: {
 		disc_req: HDHOMERUN_TYPE_DISCOVER_REQ,
 		disc_rpy: HDHOMERUN_TYPE_DISCOVER_RPY,

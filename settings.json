@@ -1,82 +1,88 @@
 {
-  "config": [
-    {
-      "type": "device",
-      "FriendlyName": "HDHomeRun Connect Live",
-      "ModelNumber": "DHR5-2US",
-      "FirmwareName": "hdhomerun5_atsc",
-      "TunerCount": 2,
-      "FirmwareVersion": "20180817",
-      "DeviceID": "1068A133",
-      "DeviceAuth": "noauth"
-    },
-    {
-      "type": "app",
-      "SkipScan": true,
-      "Debug": true,
-      "ChromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-      "ServerAddress": "192.168.0.107",
-      "Provider": "WOW",
-      "Username": "jeffdoubleyou",
-      "Password": "passwordtest"
-    }
-  ],
   "channels": [
     {
-      "GuideNumber": 1208,
-      "GuideName": "FX",
+      "GuideNumber": 1213,
+      "GuideName": "BLOOM",
       "HD": 1,
       "AudioCodec": "AC3",
-      "VideoCodec": "H264"
+      "VideoCodec": "MPEG2"
     },
     {
-      "GuideNumber": 1209,
-      "GuideName": "FXM",
-      "HD": 1,
+      "GuideNumber": 1212,
+      "GuideName": "CN",
+      "HD": 0,
       "AudioCodec": "AC3",
-      "VideoCodec": "H264"
+      "VideoCodec": "MPEG2"
     },
     {
-      "GuideNumber": 1210,
-      "GuideName": "FXX",
-      "HD": 1,
+      "GuideNumber": 1216,
+      "GuideName": "CNET",
+      "HD": 0,
       "AudioCodec": "AC3",
-      "VideoCodec": "H264"
-    },
-    {
-      "GuideNumber": 1211,
-      "GuideName": "USA",
-      "HD": 1,
-      "AudioCodec": "AC3",
-      "VideoCodec": "H264"
-    },
-    {
-      "GuideNumber": 1206,
-      "GuideName": "TBS",
-      "HD": 1,
-      "AudioCodec": "AC3",
-      "VideoCodec": "H264"
-    },
-    {
-      "GuideNumber": 1207,
-      "GuideName": "TNT",
-      "HD": 1,
-      "AudioCodec": "AC3",
-      "VideoCodec": "H264"
+      "VideoCodec": "MPEG2"
     },
     {
       "GuideNumber": 1301,
       "GuideName": "CSPAN",
       "HD": 1,
       "AudioCodec": "AC3",
-      "VideoCodec": "H264"
+      "VideoCodec": "MPEG2"
+    },
+    {
+      "GuideNumber": 1208,
+      "GuideName": "FX",
+      "HD": 1,
+      "AudioCodec": "AC3",
+      "VideoCodec": "MPEG2"
+    },
+    {
+      "GuideNumber": 1209,
+      "GuideName": "FXM",
+      "HD": 1,
+      "AudioCodec": "AC3",
+      "VideoCodec": "MPEG2"
+    },
+    {
+      "GuideNumber": 1210,
+      "GuideName": "FXX",
+      "HD": 1,
+      "AudioCodec": "AC3",
+      "VideoCodec": "MPEG2"
     },
     {
       "GuideNumber": 1310,
       "GuideName": "HGTV",
       "HD": 1,
       "AudioCodec": "AC3",
-      "VideoCodec": "H264"
+      "VideoCodec": "MPEG2"
+    },
+    {
+      "GuideNumber": 1215,
+      "GuideName": "ID",
+      "HD": 1,
+      "AudioCodec": "AC3",
+      "VideoCodec": "MPEG2"
+    },
+    {
+      "GuideNumber": 1206,
+      "GuideName": "TBS",
+      "HD": 1,
+      "AudioCodec": "AC3",
+      "VideoCodec": "MPEG2"
+    },
+    {
+      "GuideNumber": 1207,
+      "GuideName": "TNT",
+      "HD": 1,
+      "AudioCodec": "AC3",
+      "VideoCodec": "MPEG2"
+    },
+    {
+      "GuideNumber": 1211,
+      "GuideName": "USA",
+      "HD": 1,
+      "AudioCodec": "AC3",
+      "VideoCodec": "MPEG2"
     }
   ],
   "status": [
@@ -88,26 +94,24 @@
   ],
   "stream": [
     {
+      "GuideNumber": 1216,
+      "Url": "http://service-stitcher.clusters.pluto.tv/stitch/hls/channel/56283c8769ba54637dea0464/master.m3u8?deviceType=web&deviceMake=Chrome&deviceModel=Chrome&sid=fed1bbc8-128e-4cc4-a645-eea924ab0528&deviceId=e246fb52-1b53-4afc-b097-974ec3674efc&deviceVersion=12.0.2&appVersion=2.5.2-df6a9fe9a4551c2243cd791b651e4e5dd5a118f4&deviceDNT=0",
+      "Timestamp": 1558035186
+    },
+    {
       "GuideNumber": 1208,
-      "Timestamp": 1557438534
-    },
-    {
-      "GuideNumber": 1210,
-      "Timestamp": 1557438534
-    },
-    {
-      "GuideNumber": 1206,
-      "Timestamp": 1557438534
+      "Url": "https://fxlivewest-lh.akamaihd.net/i/fxwest_138714@138714/master.m3u8?hdnea=st=1558034962~exp=1558035292~acl=/i/fxwest_138714@138714*~id=b9e80bc5-0445-4979-ac7b-627e32e077ff~hmac=9a210c309ce9e781e4fd5f5668c7d7e666fc08241afa65cb4d4ccff015ba13be",
+      "Timestamp": 1558035200
     },
     {
       "GuideNumber": 1209,
-      "Url": "https://fxxliveeast-lh.akamaihd.net/i/fxxeast_140091@140091/master.m3u8?hdnea=st=1557438801~exp=1557439131~acl=/*~id=24254e8a-fca8-4cdd-8136-a3492caca5c8~hmac=4a61d8d3031fabff3da6a5899b31fe112539882b8c3f9a95e9491ae5ba6f67cf",
-      "Timestamp": 1557438927
+      "Url": "https://fxxlivewest-lh.akamaihd.net/i/fxxwest_140092@140092/master.m3u8?hdnea=st=1558035199~exp=1558035529~acl=/*~id=96df5c5f-68f9-4b6a-816a-d6d643733b01~hmac=aff2c79fc3533787aeacfbd0487b842043dfc35b81269303aef3ef5d2addf72e",
+      "Timestamp": 1558035230
     },
     {
-      "GuideNumber": 1207,
-      "Url": "https://turnerlive.akamaized.net/hls/live/572089/tnte/aes_slate/de/master.m3u8?hdnts=exp=1557439302~acl=/hls/live/572089/tnte/*!/hls/live/572089-b/tnte/*!/hls/live/630656/tnte/*!/hls/live/630656-b/tnte/*~id=b100684f16e4515ea0a8901344e10d34~hmac=0cd998627a7d405fdbe2b1405b7fc925ebfe48e1a204fac4f26df23984475f35",
-      "Timestamp": 1557439055
+      "GuideNumber": 1206,
+      "Url": "https://turnerlive.akamaized.net/hls/live/572094/tbse/aes_slate/de/master.m3u8?hdnts=exp=1558036459~acl=/hls/live/630666/tbse/*!/hls/live/630666-b/tbse/*!/hls/live/572094/tbse/*!/hls/live/572094-b/tbse/*~id=b100684f16e4515ea0a8901344e10d34~hmac=c43e61ee313af2d24bf00bd47b6c8734540cf6669078cc0a4cd4a6a42ecfd07c",
+      "Timestamp": 1558036255
     }
   ]
 }
