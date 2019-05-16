@@ -40,8 +40,8 @@ class Channel extends ChannelClass {
             provider.RequestMatch = '/rendition.m3u8';
             provider.RequestorId = "usa";
             provider.RedirectUrl = "https://www.usanetwork.com/videos/live"
-            provider.Debug = true;
-            provider.DataDir = './newdatadir';
+            provider.Debug = this.Debug;
+            provider.ExecutablePath = this.ExecutablePath;
             provider.on('Ready', function(url) {
                 console.log("Got URL %s", url);
                 _self.PlaylistURL = url;

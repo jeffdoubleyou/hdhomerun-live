@@ -34,8 +34,8 @@ class Channel extends ChannelClass {
             provider.RequestorId = "HGTV";
             provider.RedirectUrl = "https://watch.hgtv.com/watch/hgtv"
             provider.RequestMatch = "channel/.+\\.m3u8"
-            provider.Debug = true;
-            provider.DataDir = './newdatadir';
+            provider.Debug = this.Debug;
+            provider.ExecutablePath = this.ExecutablePath;
             provider.on('Ready', function(url) {
                 console.log("Got URL %s", url);
                 _self.PlaylistURL = url;

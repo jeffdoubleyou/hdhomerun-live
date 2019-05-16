@@ -40,8 +40,8 @@ class Channel extends ChannelClass {
             provider.Password = this.Password;
             provider.RequestorId = "TBS";
             provider.RedirectUrl = 'https://www.tntdrama.com/watchtnt/' + this._options["Timezone"];
-            provider.Debug = true;
-            provider.DataDir = './newdatadir';
+            provider.Debug = this.Debug;
+            provider.ExecutablePath = this.ExecutablePath;
             provider.on('Ready', function(url) {
                 console.log("Got URL %s", url);
                 _self.PlaylistURL = url;

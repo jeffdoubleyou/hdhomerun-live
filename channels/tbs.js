@@ -38,10 +38,10 @@ class Channel extends ChannelClass {
             provider.Provider = this.Provider;
             provider.Username = this.Username;
             provider.Password = this.Password;
+            provider.ExecutablePath = this.ExecutablePath;
             provider.RequestorId = "TBS";
             provider.RedirectUrl = 'https://www.tbs.com/watchtbs/' + this._options["Timezone"];
-            provider.Debug = true;
-            provider.DataDir = './newdatadir';
+            provider.Debug = this.Debug;
             provider.on('Ready', function(url) {
                 console.log("Got URL %s", url);
                 _self.PlaylistURL = url;
