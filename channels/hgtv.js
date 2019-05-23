@@ -1,6 +1,5 @@
 var ChannelClass = require('../lib/ChannelClass.js');
-const Provider = require('../lib/Provider.js');
-const provider = new Provider;
+const Provider = require('../lib/Provider/Discovery.js');
 
 class Channel extends ChannelClass {
 
@@ -27,12 +26,15 @@ class Channel extends ChannelClass {
             return true;
         }
 
+        let provider = new Provider({ settings: this._settings });
+
         (async() => {
             provider.Provider = this.Provider;
             provider.Username = this.Username;
             provider.Password = this.Password;
             provider.RequestorId = "HGTV";
             provider.RedirectUrl = "https://watch.hgtv.com/watch/hgtv"
+            provider.Url = provider.RedirectUrl;
             provider.RequestMatch = "channel/.+\\.m3u8"
             provider.Debug = this.Debug;
             provider.ExecutablePath = this.ExecutablePath;
@@ -54,6 +56,7 @@ class Channel extends ChannelClass {
             });
         })();
     }
+
 }
 
 module.exports = Channel;
