@@ -8,8 +8,6 @@ Should work with any type of playlist that is supported by FFMPEG, so you could 
 
 You'll want to point ChromePath in config.json to a Chrome path instead of using the built in Chromium browser installed w/ Puppeteer because you need mpeg4 support.
 
-Still trying to figure out how to get authentication working on a few different sites like those from Discovery.
-
 This is a work in progress....
 
 ## Installation:
