@@ -10,7 +10,7 @@
     "buffer-crc32": ">=0.2.1",
     "dateformat": "^3.0.3",
     "dgram": "^1.0.1",
-    "express": "^4.15.4",
+    "express": "^4.17.3",
     "fluent-ffmpeg": "^2.1.2",
     "lowdb": "^1.0.0",
     "morgan": "^1.8.2",
